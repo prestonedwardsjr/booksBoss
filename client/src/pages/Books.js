@@ -11,8 +11,8 @@ class Books extends Component {
   state = {
     books: [],
     title: "",
-    author: "",
-    synopsis: ""
+    // author: "",
+    // synopsis: ""
   };
 
   componentDidMount() {
@@ -59,7 +59,7 @@ class Books extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1>React Google Books Search?</h1>
             </Jumbotron>
             <form>
               <Input
@@ -68,20 +68,20 @@ class Books extends Component {
                 name="title"
                 placeholder="Title (required)"
               />
-              <Input
+              {/* <Input
                 value={this.state.author}
                 onChange={this.handleInputChange}
                 name="author"
                 placeholder="Author (required)"
-              />
-              <TextArea
+              /> */}
+              {/* <TextArea
                 value={this.state.synopsis}
                 onChange={this.handleInputChange}
                 name="synopsis"
                 placeholder="Synopsis (Optional)"
-              />
+              /> */}
               <FormBtn
-                disabled={!(this.state.author && this.state.title)}
+                // disabled={!(this.state.author && this.state.title)}
                 onClick={this.handleFormSubmit}
               >
                 Submit Book
@@ -90,7 +90,8 @@ class Books extends Component {
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Books On My List</h1>
+              <h1>Searched Books Results
+              </h1>
             </Jumbotron>
             {this.state.books.length ? (
               <List>
