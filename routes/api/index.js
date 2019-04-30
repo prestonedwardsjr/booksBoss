@@ -9,7 +9,7 @@ router.use("/books", bookRoutes);
 //google routes 
 router.use ("/google", googleRoutes);
 
-// for anything else render html page
+// for anything else will render html page
 router.use(function(req,res){
     res.sendFile(path.join(_dirname,"../../client/build/index.html"));
 });
